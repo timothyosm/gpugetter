@@ -11,7 +11,8 @@ changeColor.onclick = function (element) {
 };
 
 inject.onclick = function (element) {
-    chrome.runtime.sendMessage('changeColor', function (response) {
+    console.log('injecting..')
+    chrome.runtime.sendMessage({message: "changeColor"}, function (response) {
     });
 }
 
