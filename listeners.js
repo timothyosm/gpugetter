@@ -3,7 +3,7 @@ chrome.runtime.onMessage.addListener(
         if (request.message == 'changeColor') {
             (async() => {
                 chrome.tabs.executeScript({
-                    code: 'document.body.style.backgroundColor="orange"'
+                    file: 'contentScript.js'
                 })
                 console.log('Changing the color now')
             })()
@@ -19,9 +19,3 @@ chrome.runtime.onMessage.addListener(
         }
     }
 );
-
-async function doSomethingWith(request) {
-    var key = await getKey();
-    // await .....
-    return key;
-}
