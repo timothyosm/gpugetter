@@ -1,6 +1,16 @@
 let changeColor = document.getElementById('changeColor');
 let inject = document.getElementById('inject');
 
+
+switch (document.getElementById('httpType').value) {
+    case "pf":
+        // populate the popup.html with postForm type
+        document.getElementById('playArea').innerHTML = '<div>FormData type</div>';
+    case "pj":
+        document.getElementById('playArea').innerHTML = '<div>JSON type</div>';
+    default:
+}
+
 changeColor.onclick = function (element) {
     let color = element.target.value;
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
