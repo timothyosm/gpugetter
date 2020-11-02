@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        button {
+            height: 30px;
+            width: 100px;
+            outline: none;
+        }
+
+        .margin-bottom-styling {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="margin-bottom-styling">
+        <input type="text" id="url"></input>
+    <div>
+    <div class="margin-bottom-styling">
+        <select id="httpType">
+            <option value="pf">POST with FormData</option>
+            <option value="pj">POST with JSON</option>
+        </select>
+    </div>
+    <div id="playArea" class="margin-bottom-styling"></div>
+    <div class="margin-bottom-styling">
+        <input type="text" id="requestData"></input>
+    </div>
+    <div class="margin-bottom-styling">
+        <button id="changeColor">Color</button>
+        <button id="inject">Inject</button>
+        <script src="popup.js"></script>
+    </div>
+</body>
+
+</html>
